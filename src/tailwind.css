@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	body {
+		@apply bg-cf-sand font-body text-slate-900 antialiased;
+	}
+}
+
+@layer components {
+	.app-shell {
+		background-image: radial-gradient(circle at 8% 8%, rgba(14, 165, 233, 0.14), transparent 40%),
+			radial-gradient(circle at 92% 18%, rgba(16, 185, 129, 0.11), transparent 36%),
+			linear-gradient(180deg, #f0f9ff 0%, #f8fafc 38%, #ffffff 100%);
+	}
+
+	.ambient-orb {
+		@apply pointer-events-none fixed h-64 w-64 rounded-full blur-3xl opacity-50;
+		animation: slowFloat 10s ease-in-out infinite;
+	}
+
+	.ambient-orb--left {
+		@apply -left-20 top-20 bg-cyan-300;
+	}
+
+	.ambient-orb--right {
+		@apply -right-20 top-56 bg-emerald-300;
+		animation-delay: 1.5s;
+	}
+
+	.dashboard-card {
+		@apply rounded-card border border-white/70 bg-white/80 p-5 shadow-card backdrop-blur-xl sm:p-6;
+	}
+
+	.eyebrow {
+		@apply text-xs font-semibold uppercase tracking-[0.18em] text-cf-cyan;
+	}
+
+	.pill-slate {
+		@apply rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700;
+	}
+
+	.pill-cyan {
+		@apply rounded-full bg-cyan-100 px-3 py-1 text-xs font-semibold text-cyan-800;
+	}
+
+	.pill-amber {
+		@apply rounded-full bg-amber-100 px-3 py-1 text-xs font-semibold text-amber-800;
+	}
+
+	.pill-emerald {
+		@apply rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold text-emerald-800;
+	}
+
+	.pill-rose {
+		@apply rounded-full bg-rose-100 px-3 py-1 text-xs font-semibold text-rose-800;
+	}
+}
